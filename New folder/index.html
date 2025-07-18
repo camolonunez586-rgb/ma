@@ -1,0 +1,177 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>💖 Feliz Cumpleaños, Mami 💖</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #ffe4ec, #fff0f5);
+      text-align: center;
+      color: #b03060;
+      padding: 50px;
+    }
+
+    h1 {
+      font-size: 3.5em;
+      color: #e91e63;
+      margin-bottom: 10px;
+    }
+
+    img {
+      max-width: 300px;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      margin: 20px 15px;
+    }
+
+    .tulipanes {
+      font-size: 2.5em;
+      margin: 20px 0;
+      animation: florecer 3s ease-in-out infinite alternate;
+    }
+
+    @keyframes florecer {
+      from { transform: scale(1); }
+      to { transform: scale(1.1); }
+    }
+
+    p {
+      font-size: 1.4em;
+      margin: 20px;
+    }
+
+    button {
+      padding: 14px 30px;
+      font-size: 1.2em;
+      background-color: #e91e63;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      margin-top: 20px;
+    }
+
+    button:hover {
+      background-color: #c2185b;
+    }
+
+    #mensaje {
+      display: none;
+      font-size: 1.5em;
+      margin-top: 40px;
+      background: #fce4ec;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      animation: aparecer 1s ease-in-out forwards;
+    }
+
+    @keyframes aparecer {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .cartas {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 50px;
+    }
+
+    .carta {
+      background: #fff0f5;
+      border: 2px dashed #f8bbd0;
+      border-radius: 15px;
+      width: 160px;
+      height: 160px;
+      padding: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: transform 0.3s;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .carta:hover {
+      transform: scale(1.05);
+      background-color: #ffeef3;
+    }
+
+    .carta span {
+      display: none;
+      font-size: 0.95em;
+      color: #b03060;
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    .emoji {
+      font-size: 2em;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>💖 ¡Feliz Cumpleaños, Mami! 💖</h1>
+
+  <img src="foto_cena.jpg" alt="Foto en la cena familiar">
+  <img src="foto_aslan.jpg" alt="Foto con Aslan en la montaña">
+
+  <div class="tulipanes">🤍🌷💗🌷🤍🌷💗</div>
+
+  <p>Te regalo estas cartitas 💌</p>
+
+  <button onclick="mostrarMensaje()">Haz clic para ver tu mensaje</button>
+
+  <div id="mensaje">
+    💌 Mami, te amo con todo mi corazón.<br>
+    Eres la persona más valiente, fuerte y llena de amor que conozco.<br>
+    Gracias por ser mi madre, por estar siempre a mi lado, por enseñarme con tu ejemplo y tu ternura.<br>
+    Te valoro más de lo que las palabras pueden decir, y me siento la persona más afortunada por tenerte.<br>
+    ¡Te amo muchísimo, hoy y siempre! 💗🌷
+  </div>
+
+  <div class="cartas">
+    <div class="carta" onclick="mostrar(1)">
+      <div class="emoji">✉️</div>
+      <div><strong>Haz clic para leer:</strong></div><span id="carta1">Te amo porque siempre estás ahí para mí, incluso en los momentos más difíciles.</span>
+    </div>
+    <div class="carta" onclick="mostrar(2)">
+      <div class="emoji">💗</div>
+      <div><strong>Haz clic para leer:</strong></div><span id="carta2">Te amo porque tu amor es incondicional, sincero y puro.</span>
+    </div>
+    <div class="carta" onclick="mostrar(3)">
+      <div class="emoji">🌟</div>
+      <div><strong>Haz clic para leer:</strong></div><span id="carta3">Te amo porque me inspiras a ser fuerte y valiente, igual que tú.</span>
+    </div>
+    <div class="carta" onclick="mostrar(4)">
+      <div class="emoji">👣</div>
+      <div><strong>Haz clic para leer:</strong></div><span id="carta4">Te amo porque siempre has sido mi modelo a seguir. Como hijo, cada día busco ser más como tú.</span>
+    </div>
+    <div class="carta" onclick="mostrar(5)">
+      <div class="emoji">🐾</div>
+      <div><strong>Haz clic para leer:</strong></div><span id="carta5">Mami, siempre fuiste un ejemplo para mí y mi hermano. Desde lo más profundo de nuestro corazón queremos decirte que te amamos...<br>¡Y el Aslan también! 🐶</span>
+    </div>
+  </div>
+
+  <script>
+    function mostrarMensaje() {
+      document.getElementById('mensaje').style.display = 'block';
+    }
+
+    function mostrar(num) {
+      const carta = document.getElementById('carta' + num);
+      carta.style.display = carta.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+
+</body>
+</html>
